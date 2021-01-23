@@ -25,19 +25,19 @@ admissionregistration.k8s.io/v1beta1
 
 ## Build
 
-1. Build binary
+1. Build binary:
 
 ```
 # make build
 ```
 
-2. Build docker image
+2. Build docker image:
    
 ```
 # make build-image
 ```
 
-3. push docker image
+3. push docker image:
 
 ```
 # make push-image
@@ -125,7 +125,7 @@ alpine sidecar-nginx
 
 ## Troubleshooting
 
-Sometimes you may find that pod is injected with sidecar container as expected, check the following items:
+If pod is not injected with the sidecar container, check the following items:
 
 1. The sidecar-injector webhook is in running state and no error logs.
 2. The namespace in which application pod is deployed has the correct labels as configured in `mutatingwebhookconfiguration`.
